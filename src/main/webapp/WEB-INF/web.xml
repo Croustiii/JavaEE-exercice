@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>tp-exo</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>hello</servlet-name>
+		<servlet-class>fr.epsi.servlet.HelloServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>hello</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ClientsServlet</servlet-name>
+		<servlet-class>fr.epsi.servlet.ClientsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ClientsServlet</servlet-name>
+		<url-pattern>/clients</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ArticlesServlet</servlet-name>
+		<servlet-class>fr.epsi.servlet.ArticlesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ArticlesServlet</servlet-name>
+		<url-pattern>/articles</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FacturesServlet</servlet-name>
+		<servlet-class>fr.epsi.servlet.FacturesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FacturesServlet</servlet-name>
+		<url-pattern>/factures</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AjoutArticleServlet</servlet-name>
+		<servlet-class>fr.epsi.controller.AjoutArticleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AjoutArticleServlet</servlet-name>
+		<url-pattern>/ajouter/article</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AjoutClientServlet</servlet-name>
+		<servlet-class>fr.epsi.controller.AjoutClientServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AjoutClientServlet</servlet-name>
+		<url-pattern>/ajouter/client</url-pattern>
+	</servlet-mapping>	
+
+	<servlet>
+		<servlet-name>FactureDetailServlet</servlet-name>
+		<servlet-class>fr.epsi.controller.FactureDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FactureDetailServlet</servlet-name>
+		<url-pattern>/detailFacture</url-pattern>
+	</servlet-mapping>
+
+</web-app>
